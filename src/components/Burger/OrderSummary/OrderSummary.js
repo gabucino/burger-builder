@@ -20,8 +20,10 @@ class OrderSummary extends Component {
                 </ul>
                 <p><strong>Total price: ${this.props.totalPrice.toFixed(2)}</strong></p>
                 <p>Continue to Checkout?</p>
+                <div style={{display: 'flex', flexWrap: 'wrap'}}>
                 <Button clicked={this.props.purchaseCancel} btnType="Danger">CANCEL</Button>
                 <Button clicked={this.props.purchaseContinue} btnType="Success">CONTINUE</Button>
+                </div>
             </Fragment>
         )
     }
