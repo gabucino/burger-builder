@@ -3,6 +3,9 @@ import React from 'react';
 import classes from './Burger.module.css'
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
+//Adding withRouter hoc takes the router/props from the parent component
+import { withRouter } from 'react-router-dom'
+
 const burger = (props) => {
     //Use Object.keys on the ingridients props, to extract JUST THE KEYS as string, not the values
     let transformedIngredients = Object.keys(props.ingredients)
@@ -19,7 +22,6 @@ const burger = (props) => {
         .reduce((reducedArr, currentArr) => {
             return reducedArr.concat(currentArr)
         }, [])
-    console.log(transformedIngredients)
     if (transformedIngredients.length === 0) {
         transformedIngredients = <p>Please add something to your burger!</p>
     }
@@ -33,4 +35,4 @@ const burger = (props) => {
     );
 }
 
-export default burger;
+export default withRouter(burger);
