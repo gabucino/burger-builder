@@ -10,7 +10,7 @@ const NavigationItems = (props) => {
             {props.isAuthenticated
                 ? <Fragment><NavigationItem closed={props.closed} link="/orders">Orders</NavigationItem>
                     <NavigationItem closed={props.closed} link="/logout">Logout</NavigationItem> </Fragment> :
-                <NavigationItem closed={props.closed} link="/auth">Login</NavigationItem>}
+                <NavigationItem closed={props.closed} link="/auth">Sign up</NavigationItem>}
         </ul>
     );
 }
